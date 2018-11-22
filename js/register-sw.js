@@ -18,7 +18,7 @@ const cacheFiles = [
     '/img/9.jpg',
     '/img/10.jpg'
 ];
-
+// Register service worker only if supported
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/sw.js').then(function(registration) {
