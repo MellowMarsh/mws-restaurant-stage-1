@@ -35,8 +35,8 @@ Most of the code in this project has been written to the ES6 JavaScript specific
 ## Tools Used:
 *The Offline Cookbook by Jake Archibald:
 https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/
-*This code was used to help the service worker to register.
-https://alexandroperez.github.io/mws-walkthrough/?1.23.registering-service-worker-and-caching-static-assets
+*Service Workers: an Introduction by  Matt Gaunt
+https://developers.google.com/web/fundamentals/primers/service-workers/
 *Restuarant-stage-1 Webinar with Doug Brown: 
 https://youtu.be/92dtrNU1GQc
 
