@@ -8,9 +8,9 @@
 
 2. In your terminal use Python to open up a local server: $ php -S localhost:8000.
 
-3. Open up the localhost:8000 in Chrome or your favorite broweser.
+3. Open up the localhost:8000 in Chrome or your favorite browser.
 
-4. This projet requires an API token for the map. Use google maps or mapbox. I used mapbox (https://www.mapbox.com) it is free    to get the token.
+4. This project requires an API token for the map. Use google maps or mapbox. I used mapbox (https://www.mapbox.com) it is        free to get the token.
 
 5. Further instructions on how to get through this project are located in the READ.md in the cloned repo.
 
