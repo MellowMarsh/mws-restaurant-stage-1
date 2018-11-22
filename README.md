@@ -33,7 +33,7 @@ This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://w
 Most of the code in this project has been written to the ES6 JavaScript specification for compatibility with modern web browsers and future proofing JavaScript code. As much as possible, try to maintain use of ES6 in any additional JavaScript you write.
 
 ## Tools Used:
-*The Offline Cookbook:
+*The Offline Cookbook by Jake Archibald:
 https://developers.google.com/web/fundamentals/instant-and-offline/offline-cookbook/
 *This code was used to help the service worker to register.
 https://alexandroperez.github.io/mws-walkthrough/?1.23.registering-service-worker-and-caching-static-assets
