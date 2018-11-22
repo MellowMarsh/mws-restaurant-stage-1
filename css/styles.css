@@ -289,12 +289,12 @@ nav h1 a {
 }
 @media only screen and (min width 8px){
 	#restaurants-list li {
-		max-width: 100%
+		max-width: 100%;
 	}
 }
 @media only screen and (min-width 714px){
 	#restaurants-list li {
-		max-width: 45%
+		max-width: 45%;
 	  }
 	}
 	@media only screen and (min-width 714px){
