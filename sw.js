@@ -1,39 +1,37 @@
-const appName = "restaurantReviews"
-const staticCacheName = appName + "-v1.0";
-const contentImgsCache = appName + "-images";
-var allCaches = [
-  staticCacheName,
-  contentImgsCache
+
+var CACHE_NAME = 'restaurant-review-v1';
+var urlsToCache = [
+  '/',
+  '/index.html',
+  '/restaurant.html',
+  '/css/styles.css',
+  '/js/dbhelper.js',
+  '/js/main.js',
+  '/js/restaurant_info.js',
+  'js/register-sw.js',
+  'data/restaurants.json'
 ];
-/** At Service Worker Install time, cache all static assets */
+
 self.addEventListener('install', function(event) {
+  // Perform install steps
   event.waitUntil(
-    caches.open(staticCacheName).then(function(cache) {
-      return cache.addAll([
-        '/index.html',
-        '/restaurant.html',
-        '/css/styles.css',
-        '/js/dbhelper.js',
-        '/js/main.js',
-        '/js/restaurant_info.js',
-        'js/register-sw.js',
-        'data/restaurants.json'
-      ]);
-    })
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
   );
 });
-/** At Service Worker Activation, Delete previous caches, if any */
-self.addEventListener('activate', function(event) {
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.filter(function(cacheName) {
-          return cacheName.startsWith(appName) &&
-                 !allCaches.includes(cacheName);
-        }).map(function(cacheName) {
-          return caches.delete(cacheName);
-        })
-      );
-    })
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
   );
 });

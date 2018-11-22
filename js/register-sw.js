@@ -18,11 +18,15 @@ const cacheFiles = [
     '/img/9.jpg',
     '/img/10.jpg'
 ];
-// Register service worker only if supported
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register('/sw.js').then(function(reg) {
-    console.log("Service Worker has been registered successfully!");
-  }).catch((e) => {
-    console.log("Couldn't register service worker... \n", e);
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
   });
 }
