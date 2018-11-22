@@ -1,6 +1,6 @@
 # Restaurant Reviews Stage 1
 
-*Offline capable app for local restaurants reviews/information
+ This is an offline capable app for local restaurants reviews and information.
 
 ## Installing The App and Getting It Loaded to Browser:
 
