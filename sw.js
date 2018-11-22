@@ -1,4 +1,3 @@
-
 var CACHE_NAME = 'restaurant-review-v1';
 var urlsToCache = [
   '/',
