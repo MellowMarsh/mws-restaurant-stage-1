@@ -21,12 +21,6 @@ body {
 	margin-right: auto;
 }
 
-.container {
-	display: flex;
-	flex-wrap: wrap;
-	min-width: 320px;
-}
-
 ul,
 li {
 	font-family: Arial, Helvetica, sans-serif;
@@ -436,7 +430,7 @@ nav {
 
 /* ====================== Responsive====================== */
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 502px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 639px) {
 	.filter-selects {
 		margin: 0px 30px;
 	}
@@ -449,7 +443,7 @@ nav {
 	}
 }
 
-@media screen and (min-width: 503px) {
+@media screen and (min-width: 639px) {
 	#restaurants-list li {
 		max-width: 40%;
 	}
@@ -461,7 +455,6 @@ nav {
 }
 
 @media screen and (min-width: 900px) {
-	.container,
 	.inside {
 		width: 900px;
 		margin-left: auto;
